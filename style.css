@@ -292,3 +292,38 @@ th, td {
   text-align: left;
   padding-left: 12px;
 }
+
+/* --------------------
+      X(Twitter)ボタン
+-------------------- */
+.x-link-box {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f7f9fa; /* やわらかい薄グレー */
+  border: 1px solid #e1e8ed;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.x-status {
+  font-size: 0.9rem;
+  color: #536471;
+  margin: 0 0 15px 0;
+}
+
+/* ポートフォリオのテーマカラー（緑）の丸みボタン */
+.x-btn {
+  display: inline-block;
+  background-color: var(--theme-color);
+  color: #fff !important; /* 文字を絶対に白にする */
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+
+.x-btn:hover {
+  opacity: 0.8; /* マウスを乗せたときにふわっと光る */
+}
