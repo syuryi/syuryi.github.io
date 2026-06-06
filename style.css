@@ -279,23 +279,23 @@ th, td {
 -------------------- */
 .interests-container {
   display: flex;
-  flex-direction: column; /* 📱 基本は縦並び */
+  flex-direction: column; /* 📱 スマホでは縦に並ぶ */
   gap: 20px;
   max-width: 600px; 
   margin-top: 15px;
   margin-bottom: 30px;
 }
 
-/* 💻 画面の横幅が 768px 以上（フルスクリーン）の時だけ横並び */
+/* 💻 フルスクリーンの時だけ、左右に「50%ずつ」の同じ幅で綺麗に横並びにする設定 */
 @media (min-width: 768px) {
   .interests-container {
     flex-direction: row; 
+    max-width: 100%; /* フル画面の時は全体の横幅もグッと広げます */
   }
 }
 
 .interest-box {
-  flex: 1;
-  width: 100%; 
+  flex: 1; /* 💡 これで左右のボックスが「全く同じ幅」に揃って伸び縮みします！ */
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -330,44 +330,6 @@ th, td {
   margin-bottom: 8px;
 }
 
-/* 🎀 画面幅に合わせて自動で伸び縮みするリボンレース */
-.cute-line {
-  display: flex;
-  align-items: center;        /* 縦の中心を揃える */
-  margin: 25px auto;
-  width: 80%;                 /* 画面に合わせて80%の幅で縮む */
-  color: var(--theme-color);
-}
-
-/* 左側の飾り（⑅∙˚） */
-.cute-line::before {
-  content: "⑅∙˚";
-  font-size: 0.9rem;
-  padding-right: 6px;         /* 点線とのすき間 */
-}
-
-/* 真ん中の点線（画面に合わせてビヨーンと伸びる） */
-.cute-line::after {
-  content: "";
-  flex: 1;                    /* 空いているスペースいっぱいに点線を伸ばす */
-  border-bottom: dashed 1px var(--theme-color); /* これが点線（┈┈┈┈）になります！ */
-}
-
-/* 右側の飾り（˚∙⑅） */
-.cute-line-right {
-  font-size: 0.9rem;
-  padding-left: 6px;          /* 点線とのすき間 */
-}
-
-/* 苦手なゲームの一言メモ */
-.game-note {
-  font-size: 0.85rem;
-  color: #666; 
-  line-height: 1.5;
-  margin: 0;
-  text-align: center; 
-}
-
 /* 🏷️ ゲーム名を横並びのタグ風にする枠 */
 .game-tags {
   display: flex;
@@ -389,11 +351,47 @@ th, td {
   letter-spacing: 0.03em;
 }
 
-/* 💡「など」を右端に寄せる命令 */
+/* 「など」を右端に寄せる命令 */
 .text-right {
   text-align: right;
   font-size: 0.8rem;
   color: #888;
   margin: 5px 0 0 0; 
   padding-right: 5px;
+}
+
+/* 🎀 新・リボンレース区切り線（完璧版） */
+.cute-line {
+  display: flex;
+  align-items: center;        /* 縦の中心を揃える */
+  margin: 25px auto;
+  width: 90%;                 /* ボックスの幅に合わせて自動で縮む */
+  color: var(--theme-color);
+}
+
+/* 左側の飾り */
+.left-decor {
+  font-size: 0.9rem;
+  padding-right: 6px;
+}
+
+/* 真ん中の点線（いけるところまでビヨーンと自動で伸びる！） */
+.line-center {
+  flex: 1;
+  border-bottom: dashed 1px var(--theme-color);
+}
+
+/* 右側の飾り */
+.right-decor {
+  font-size: 0.9rem;
+  padding-left: 6px;
+}
+
+/* 苦手なゲームの一言メモ */
+.game-note {
+  font-size: 0.85rem;
+  color: #666; 
+  line-height: 1.5;
+  margin: 0;
+  text-align: center; 
 }
