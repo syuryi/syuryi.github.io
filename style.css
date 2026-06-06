@@ -75,3 +75,14 @@ th, td {
   border: solid 1px #f0f0f0;
   padding: 0.5rem;
 }
+/* --------------------
+      アイコン
+-------------------- */
+
+.icon {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid 3px var(--theme-color);
+}
