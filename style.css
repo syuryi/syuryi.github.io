@@ -393,5 +393,6 @@ th, td {
   color: #666; 
   line-height: 1.5;
   margin: 0;
-  text-align: center; 
+  text-align: left;     /* 👈【修正】ここを左寄せにしました！ */
+  padding-left: 5px;    /* 👈 左側に少しだけ余白を入れて、タグの端っことラインを揃えます */
 }
