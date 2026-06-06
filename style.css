@@ -323,3 +323,26 @@ th, td {
   line-height: 1.7;
   margin-bottom: 8px;
 }
+
+/* --------------------
+    ゲームエリアの可愛い装飾
+-------------------- */
+
+/* 区切り線のスタイル */
+.cute-divider {
+  text-align: center;
+  color: var(--theme-color); /* テーマカラーの緑にして統一感を出す */
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  margin: 12px 0; /* 上下にちょうどいいすき間を作る */
+  opacity: 0.8;
+}
+
+/* 苦手なゲームの一言メモ */
+.game-note {
+  font-size: 0.85rem;
+  color: #666; /* 少し優しめのグレーに */
+  line-height: 1.5;
+  margin: 0;
+  padding-left: 5px; /* 左側に少しだけ余白を入れて綺麗に */
+}
