@@ -374,3 +374,20 @@ th, td {
   text-align: left;     
   padding-left: 5px;    
 }
+
+/* --------------------
+    ページ最下部のフッター
+-------------------- */
+footer {
+  text-align: center;
+  padding: 40px 0 20px 0; /* 上下にゆったりとした余白を作る */
+  margin-top: 50px;       /* YouTube動画との間のすき間 */
+  border-top: 1px solid #eee; /* 上側にうっすらと区切り線を入れる */
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: #999;            /* 目立ちすぎない優しいグレー */
+  letter-spacing: 0.05em;
+  margin: 0;
+}
