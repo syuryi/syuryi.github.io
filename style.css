@@ -258,25 +258,27 @@ th, td {
 
 /* 各項目（名前、出身など）の1行分の枠 */
 .profile-item {
-  display: flex;
+  display: flex !important;       /* 強制的に横並びにする魔法 */
+  align-items: flex-start;        /* 上のラインで揃える */
   border-bottom: 1px dashed #e0e0e0; /* 薄い点線で区切る */
-  padding: 10px 0;
+  padding: 12px 0;
 }
 
 /* 左側：項目名（名前、出身など） */
 .profile-list dt {
   font-weight: bold;
-  color: var(--theme-color); /* テーマカラーの緑にする */
-  width: 120px;              /* 左側の幅を固定して縦のラインを揃える */
-  flex-shrink: 0;
+  color: var(--theme-color); 
+  width: 140px;              /* 幅を少し広めにして余裕を持たせました */
+  flex-shrink: 0;            /* 画面が狭くなっても絶対に縮まないように固定 */
+  margin: 0;
 }
 
 /* 右側：中身（syuryi、大阪府など） */
 .profile-list dd {
   margin: 0;
   color: #333;
+  flex: 1;                   /* 残りのスペースを全部使う */
 }
-
 /* --------------------
     新・スキルテーブル調整
 -------------------- */
