@@ -346,3 +346,7 @@ th, td {
   margin: 0;
   padding-left: 5px; /* 左側に少しだけ余白を入れて綺麗に */
 }
+
+.text-right {
+  text-align: right; /* これが右寄せにする魔法の命令です */
+}
