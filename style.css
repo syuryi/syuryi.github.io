@@ -392,3 +392,10 @@ footer p {
   letter-spacing: 0.05em;
   margin: 0;
 }
+
+/* 「このサイトについて」の日付の色をグレーにする */
+.about-section .date {
+  color: #a0a0a0;       /* 👈 きょうのできごとと同じ感じの優しい薄グレー */
+  font-size: 0.85rem;   /* ほんの少しだけ文字を小さくしてすっきり見せる */
+  margin-right: 10px;   /* 本文との間に少しだけすき間を作る */
+}
