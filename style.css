@@ -97,33 +97,37 @@ th, td {
 -------------------- */
 .activity-box {
   max-width: 500px;
-  margin: 40px auto;
+  margin: 40px 0; /* 【修正】中央寄せ(auto)をやめて、左側に揃えました */
   padding: 24px;
   background-color: #ffffff; 
   border: 1px solid #e0e0e0; 
   border-radius: 12px;        
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
 }
+
 .activity-box h2 {
   font-size: 1.1rem;
   border-bottom: none; 
   color: var(--theme-color); 
   margin-top: 0;
   margin-bottom: 16px;
-  text-align: center;      
+  text-align: left;      /* 【修正】タイトルも左寄せにして他の見出しと統一 */
   letter-spacing: 0.05em;
 }
+
 .current-activity {
   border-top: dashed 0.1em #eee; 
   padding-top: 16px;
-  text-align: center;         
+  text-align: left;         /* 【修正】日付や文章も左寄せにします */
 }
+
 .current-activity .date {
   font-size: 0.85rem;
   color: #999;
   margin: 0 0 8px 0;
   font-weight: 500;
 }
+
 .current-activity .text {
   font-size: 1.05rem;
   color: #333;
@@ -131,7 +135,6 @@ th, td {
   margin: 0;
   word-break: break-all; 
 }
-
 /* --------------------
     PCフルスクリーン横並び
 -------------------- */
