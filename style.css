@@ -27,6 +27,10 @@ h1, h2, h3 {
   color: var(--theme-color);
   border-bottom: dashed 0.1em var(--theme-color);
 }
+h3 {
+  margin-top: 50px;    /* 上の文とのすき間を広げてゆったりさせる */
+  margin-bottom: 18px; /* 下のコンテンツとのすき間 */
+}
 
 /* --------------------
         リンク
