@@ -330,41 +330,33 @@ th, td {
   margin-bottom: 8px;
 }
 
-/* 🎀 画面幅に合わせて自動で伸び縮みするリボンレース（最新版） */
+/* 🎀 画面幅に合わせて自動で伸び縮みするリボンレース */
 .cute-line {
   display: flex;
-  align-items: center;  /* 左右の文字と中央の線をぴったり真ん中で揃える */
-  justify-content: center;
+  align-items: center;        /* 縦の中心を揃える */
   margin: 25px auto;
-  width: 80%;           /* 画面に合わせて全体の幅が80%で伸縮します */
-  color: var(--theme-color); /* 全体の色をテーマカラーの緑に統一 */
+  width: 80%;                 /* 画面に合わせて80%の幅で縮む */
+  color: var(--theme-color);
 }
 
-/* 🎀 左側の飾り */
+/* 左側の飾り（⑅∙˚） */
 .cute-line::before {
   content: "⑅∙˚";
   font-size: 0.9rem;
-  padding-right: 4px;   /* 点線との間のすき間 */
+  padding-right: 6px;         /* 点線とのすき間 */
 }
 
-/* 🎀 真ん中の伸縮する点線 */
-.cute-line {
-  /* display: flex を使っているので、中身の線を自動で引き伸ばします */
-}
-/* 新しく点線専用の仕組みを中に作ります */
+/* 真ん中の点線（画面に合わせてビヨーンと伸びる） */
 .cute-line::after {
   content: "";
-  flex: 1;              /* 画面の幅に合わせて、いけるところまでビヨーンと伸びる魔法 */
-  border-bottom: dashed 1px var(--theme-color); /* これが点線の正体です！ */
-  position: static;     /* 前の設定をリセット */
-  transform: none;      /* 前の設定をリセット */
-  background: none;     /* 前の設定をリセット */
-  padding: 0;
+  flex: 1;                    /* 空いているスペースいっぱいに点線を伸ばす */
+  border-bottom: dashed 1px var(--theme-color); /* これが点線（┈┈┈┈）になります！ */
 }
 
-/* 🎀 右側の飾り（HTMLをいじらずにCSSだけで右端に追加します） */
-.cute-line::after {
-  /* ※上のafterを点線で使ったので、右の飾りは少し特殊な方法で追加します */
+/* 右側の飾り（˚∙⑅） */
+.cute-line-right {
+  font-size: 0.9rem;
+  padding-left: 6px;          /* 点線とのすき間 */
 }
 
 /* 苦手なゲームの一言メモ */
