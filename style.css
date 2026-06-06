@@ -279,37 +279,43 @@ th, td {
 -------------------- */
 .interests-container {
   display: flex;
-  flex-wrap: wrap; 
+  flex-direction: column; /* 📱 基本は縦並び */
   gap: 20px;
   max-width: 600px; 
   margin-top: 15px;
-  margin-bottom: 30px; /* 下の「好きな動画」とのすき間 */
+  margin-bottom: 30px;
+}
+
+/* 💻 画面の横幅が 768px 以上（フルスクリーン）の時だけ横並び */
+@media (min-width: 768px) {
+  .interests-container {
+    flex-direction: row; 
+  }
 }
 
 .interest-box {
   flex: 1;
-  min-width: 250px; 
+  width: 100%; 
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 18px; /* 内側の余白を少し広げてゆったりさせました */
+  padding: 20px; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
 .interest-box h4 {
   margin: 0 0 15px 0;
-  font-size: 1.1rem; /* 英語のサイズを少し大きく */
+  font-size: 1.1rem; 
   color: #333;
   border-bottom: 1px solid #eee;
   padding-bottom: 8px;
 }
 
-/* 💡 ルビ（ふりがな）をオシャレにする魔法 */
 .interest-box h4 rt {
-  font-size: 0.65rem;      /* ルビの文字を小さく */
-  color: var(--theme-color); /* ルビの色をテーマカラーの緑にしてアクセントに！ */
-  font-weight: normal;     /* ルビは細い文字にしてすっきりと */
-  padding-bottom: 4px;     /* 英語との間のすき間 */
+  font-size: 0.65rem;      
+  color: var(--theme-color); 
+  font-weight: normal;     
+  padding-bottom: 4px;     
 }
 
 .interest-list {
@@ -324,29 +330,62 @@ th, td {
   margin-bottom: 8px;
 }
 
-/* --------------------
-    ゲームエリアの可愛い装飾
--------------------- */
-
-/* 区切り線のスタイル */
-.cute-divider {
+/* 🎀 リボン風区切り線 */
+.cute-line {
   text-align: center;
-  color: var(--theme-color); /* テーマカラーの緑にして統一感を出す */
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  margin: 12px 0; /* 上下にちょうどいいすき間を作る */
-  opacity: 0.8;
+  position: relative;
+  height: 1px;
+  background: dashed 1px var(--theme-color);
+  margin: 20px auto;
+  width: 80%;
+}
+.cute-line::after {
+  content: "⑅∙˚";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 0 10px;
+  color: var(--theme-color);
+  font-size: 0.9rem;
 }
 
 /* 苦手なゲームの一言メモ */
 .game-note {
   font-size: 0.85rem;
-  color: #666; /* 少し優しめのグレーに */
+  color: #666; 
   line-height: 1.5;
   margin: 0;
-  padding-left: 5px; /* 左側に少しだけ余白を入れて綺麗に */
+  text-align: center; 
 }
 
+/* 🏷️ ゲーム名を横並びのタグ風にする枠 */
+.game-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;        
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* 1つのゲームタグ（カプセル風） */
+.game-tags .tag {
+  background-color: #f0f7f7;       
+  color: var(--theme-color);       
+  border: 1px solid #cce6e6;       
+  padding: 6px 14px;               
+  border-radius: 20px;             
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+/* 💡「など」を右端に寄せる命令 */
 .text-right {
-  text-align: right; /* これが右寄せにする魔法の命令です */
+  text-align: right;
+  font-size: 0.8rem;
+  color: #888;
+  margin: 5px 0 0 0; 
+  padding-right: 5px;
 }
