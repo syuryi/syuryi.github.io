@@ -244,3 +244,51 @@ th, td {
   color: #666;
   line-height: 1.5;
 }
+
+/* --------------------
+    新・プロフィール設定
+-------------------- */
+
+/* プロフィール全体 */
+.profile-list {
+  max-width: 600px;
+  margin: 20px 0;
+  padding: 0;
+}
+
+/* 各項目（名前、出身など）の1行分の枠 */
+.profile-item {
+  display: flex;
+  border-bottom: 1px dashed #e0e0e0; /* 薄い点線で区切る */
+  padding: 10px 0;
+}
+
+/* 左側：項目名（名前、出身など） */
+.profile-list dt {
+  font-weight: bold;
+  color: var(--theme-color); /* テーマカラーの緑にする */
+  width: 120px;              /* 左側の幅を固定して縦のラインを揃える */
+  flex-shrink: 0;
+}
+
+/* 右側：中身（syuryi、大阪府など） */
+.profile-list dd {
+  margin: 0;
+  color: #333;
+}
+
+/* --------------------
+    新・スキルテーブル調整
+-------------------- */
+.skills-table {
+  width: 100%;
+  max-width: 600px; /* プロフィールの幅とぴったり揃える */
+  margin-top: 15px;
+}
+
+/* テーブルの一番左のヘッダーの幅をプロフィールの縦ラインと合わせる */
+.skills-table th {
+  width: 120px;
+  text-align: left;
+  padding-left: 12px;
+}
