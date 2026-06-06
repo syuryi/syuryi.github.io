@@ -364,39 +364,13 @@ th, td {
   padding-right: 5px;
 }
 
-/* 🎀 新・リボンレース区切り線（完璧版） */
-.cute-line {
-  display: flex;
-  align-items: center;        /* 縦の中心を揃える */
-  margin: 25px auto;
-  width: 90%;                 /* ボックスの幅に合わせて自動で縮む */
-  color: var(--theme-color);
-}
-
-/* 左側の飾り */
-.left-decor {
-  font-size: 0.9rem;
-  padding-right: 6px;
-}
-
-/* 真ん中の点線（いけるところまでビヨーンと自動で伸びる！） */
-.line-center {
-  flex: 1;
-  border-bottom: dashed 1px var(--theme-color);
-}
-
-/* 右側の飾り */
-.right-decor {
-  font-size: 0.9rem;
-  padding-left: 6px;
-}
-
 /* 苦手なゲームの一言メモ */
 .game-note {
   font-size: 0.85rem;
   color: #666; 
   line-height: 1.5;
-  margin: 0;
-  text-align: left;     /* 👈【修正】ここを左寄せにしました！ */
-  padding-left: 5px;    /* 👈 左側に少しだけ余白を入れて、タグの端っことラインを揃えます */
+  margin-top: 25px;    /* 💡 線の代わりに、25pxのきれいな透明のすき間を作りました！ */
+  margin-bottom: 0;
+  text-align: left;     
+  padding-left: 5px;    
 }
