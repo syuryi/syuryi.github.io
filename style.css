@@ -249,35 +249,14 @@ th, td {
 }
 
 /* --------------------
-     X(Twitter)ボタン
+     動画・外部埋め込み（iframe）
 -------------------- */
-.x-link-box {
-  max-width: 400px;
-  padding: 20px;
-  background-color: #f7f9fa; 
-  border: 1px solid #e1e8ed;
-  border-radius: 12px;
-  text-align: center;
-  margin-top: 15px;
+iframe {
+  max-width: 100%;    /* 📱 画面幅に合わせて自動で縮む（はみ出し防止！） */
+  border: none;       /* YouTubeの周りに出る余計な黒い線を消す */
+  border-radius: 8px; /* 四隅をほんのり丸くして、上のボックスと雰囲気を合わせる */
 }
-.x-status {
-  font-size: 0.9rem;
-  color: #536471;
-  margin: 0 0 15px 0;
-}
-.x-btn {
-  display: inline-block;
-  background-color: var(--theme-color);
-  color: #fff !important; 
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 0.95rem;
-  transition: opacity 0.2s;
-}
-.x-btn:hover {
-  opacity: 0.8; 
-}
+
 
 /* --------------------
     趣味・目標セクション
